@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        font-family: Arial, sans-serif;
+    }
+    
+    h2 {
+        margin-bottom: 20px;
+    }
+    
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-right: 70px;
+    }
+
+ 
+    
+    .button {
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin: 0 10px;
+        transition: background-color 0.3s;
+        position: absolute;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    
+    .button:hover {
+        background-color: red;
+        color: #fff;
+    }
+
+#sim{
+    background-color: green;
+}
+
+#nao{
+    background-color: red;
+}
+
+    
+</style>
+</head>
+<body>
+
+<h2>Foto teta?</h2>
+
+<div class="button-container">
+    <button class="button" id="sim">Sim</button>
+</div>
+
+
+<div class="button-container2">
+    <button class="button" id="nao">Não</button>
+</div>
+
+<script>
+     const simButton = document.getElementById("sim");
+    
+    simButton.addEventListener("click", function() {
+        window.location.href = "https://wa.me/5537998622873";
+    });
+    const naoButton = document.getElementById("nao");
+    
+    naoButton.addEventListener("mouseover", function() {
+        const screenWidth = window.innerWidth - naoButton.clientWidth;
+        const screenHeight = window.innerHeight - naoButton.clientHeight;
+        
+        const randomX = Math.floor(Math.random() * screenWidth);
+        const randomY = Math.floor(Math.random() * screenHeight);
+        
+        naoButton.style.left = randomX + "px";
+        naoButton.style.top = randomY + "px";
+    });
+</script>
+
+</body>
+</html>
